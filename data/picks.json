@@ -1,0 +1,180 @@
+{
+  "picks": [
+    {
+      "pick_id": "2026-03-16-atl-orl-trae-ast",
+      "date": "2026-03-16",
+      "game": "ORL @ ATL",
+      "player": "Trae Young",
+      "line": "OVER 8.5 ast",
+      "threshold": 8.5,
+      "dir": "over",
+      "stat": "ast",
+      "conf": 74
+    },
+    {
+      "pick_id": "2026-03-16-atl-orl-wagner-pts",
+      "date": "2026-03-16",
+      "game": "ORL @ ATL",
+      "player": "Franz Wagner",
+      "line": "OVER 22.5 pts",
+      "threshold": 22.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 68
+    },
+    {
+      "pick_id": "2026-03-16-was-gsw-curry-tpm",
+      "date": "2026-03-16",
+      "game": "GSW @ WAS",
+      "player": "Stephen Curry",
+      "line": "OVER 3.5 threes",
+      "threshold": 3.5,
+      "dir": "over",
+      "stat": "tpm",
+      "conf": 78
+    },
+    {
+      "pick_id": "2026-03-16-was-gsw-poole-pts",
+      "date": "2026-03-16",
+      "game": "GSW @ WAS",
+      "player": "Jordan Poole",
+      "line": "OVER 18.5 pts",
+      "threshold": 18.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 65
+    },
+    {
+      "pick_id": "2026-03-16-bos-phx-tatum-pra",
+      "date": "2026-03-16",
+      "game": "PHX @ BOS",
+      "player": "Jayson Tatum",
+      "line": "OVER 45.5 PRA",
+      "threshold": 45.5,
+      "dir": "over",
+      "stat": "pra",
+      "conf": 71
+    },
+    {
+      "pick_id": "2026-03-16-bos-phx-durant-pts",
+      "date": "2026-03-16",
+      "game": "PHX @ BOS",
+      "player": "Kevin Durant",
+      "line": "OVER 27.5 pts",
+      "threshold": 27.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 69
+    },
+    {
+      "pick_id": "2026-03-16-bkn-por-henderson-pa",
+      "date": "2026-03-16",
+      "game": "POR @ BKN",
+      "player": "Scoot Henderson",
+      "line": "OVER 32.5 pts+ast",
+      "threshold": 32.5,
+      "dir": "over",
+      "stat": "pa",
+      "conf": 66
+    },
+    {
+      "pick_id": "2026-03-16-bkn-por-thomas-pts",
+      "date": "2026-03-16",
+      "game": "POR @ BKN",
+      "player": "Cam Thomas",
+      "line": "OVER 23.5 pts",
+      "threshold": 23.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 70
+    },
+    {
+      "pick_id": "2026-03-16-nop-dal-luka-pts",
+      "date": "2026-03-16",
+      "game": "DAL @ NOP",
+      "player": "Luka Doncic",
+      "line": "OVER 31.5 pts",
+      "threshold": 31.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 73
+    },
+    {
+      "pick_id": "2026-03-16-nop-dal-zion-reb",
+      "date": "2026-03-16",
+      "game": "DAL @ NOP",
+      "player": "Zion Williamson",
+      "line": "OVER 7.5 reb",
+      "threshold": 7.5,
+      "dir": "over",
+      "stat": "reb",
+      "conf": 72
+    },
+    {
+      "pick_id": "2026-03-16-chi-mem-morant-pts",
+      "date": "2026-03-16",
+      "game": "MEM @ CHI",
+      "player": "Ja Morant",
+      "line": "OVER 24.5 pts",
+      "threshold": 24.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 69
+    },
+    {
+      "pick_id": "2026-03-16-chi-mem-vucevic-pr",
+      "date": "2026-03-16",
+      "game": "MEM @ CHI",
+      "player": "Nikola Vucevic",
+      "line": "OVER 28.5 pts+reb",
+      "threshold": 28.5,
+      "dir": "over",
+      "stat": "pr",
+      "conf": 67
+    },
+    {
+      "pick_id": "2026-03-16-hou-lal-lebron-ast",
+      "date": "2026-03-16",
+      "game": "LAL @ HOU",
+      "player": "LeBron James",
+      "line": "OVER 7.5 ast",
+      "threshold": 7.5,
+      "dir": "over",
+      "stat": "ast",
+      "conf": 70
+    },
+    {
+      "pick_id": "2026-03-16-hou-lal-sengun-pr",
+      "date": "2026-03-16",
+      "game": "LAL @ HOU",
+      "player": "Alperen Sengun",
+      "line": "OVER 27.5 pts+reb",
+      "threshold": 27.5,
+      "dir": "over",
+      "stat": "pr",
+      "conf": 74
+    },
+    {
+      "pick_id": "2026-03-16-lac-sas-wemby-blk",
+      "date": "2026-03-16",
+      "game": "SAS @ LAC",
+      "player": "Victor Wembanyama",
+      "line": "OVER 2.5 blk",
+      "threshold": 2.5,
+      "dir": "over",
+      "stat": "blk",
+      "conf": 76
+    },
+    {
+      "pick_id": "2026-03-16-lac-sas-wemby-pts",
+      "date": "2026-03-16",
+      "game": "SAS @ LAC",
+      "player": "Victor Wembanyama",
+      "line": "OVER 24.5 pts",
+      "threshold": 24.5,
+      "dir": "over",
+      "stat": "pts",
+      "conf": 72
+    }
+  ]
+}
