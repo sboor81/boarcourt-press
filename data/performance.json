@@ -1,6 +1,11 @@
 {
-  "last_updated": null,
-  "overall": { "hits": 0, "total": 0, "rate": 0, "streak": 0 },
+  "last_updated": "2026-03-19T01:48:41.437072+00:00",
+  "overall": {
+    "hits": 0,
+    "total": 0,
+    "rate": 0,
+    "streak": 0
+  },
   "by_player": {},
   "by_user": {},
   "daily": {}
