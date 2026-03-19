@@ -1,0 +1,113 @@
+# Court Edge — Auto Results Setup
+
+This folder connects to GitHub Actions so props are graded automatically every night
+at 1 AM CT, using official NBA box scores. No manual work needed.
+
+---
+
+## One-time setup (10 minutes)
+
+### Step 1 — Create a GitHub repo
+
+1. Go to [github.com](https://github.com) and sign in (free account is fine)
+2. Click **+** → **New repository**
+3. Name it `courtedge-picks` — set it to **Private**
+4. Click **Create repository**
+
+### Step 2 — Upload these files
+
+In your new repo, upload the entire folder structure:
+
+```
+.github/
+  workflows/
+    nightly-results.yml
+scripts/
+  grade_props.py
+data/
+  picks.json
+  results.json
+  performance.json
+```
+
+The easiest way:
+- Click **Add file** → **Upload files** in GitHub
+- Drag the whole `courtedge-auto` folder in
+- Click **Commit changes**
+
+### Step 3 — Enable Actions
+
+1. In your repo, click the **Actions** tab
+2. If prompted, click **I understand my workflows, go ahead and enable them**
+3. That's it — the workflow will now run automatically every night at 1 AM CT
+
+### Step 4 — Link Replit to GitHub (optional but recommended)
+
+This makes your Replit app automatically pull the latest results every time it loads:
+
+1. In Replit, click **Version Control** in the left sidebar
+2. Connect to your `courtedge-picks` GitHub repo
+3. The app will sync `data/results.json` and `data/performance.json` on each reload
+
+---
+
+## How it works each night
+
+```
+1 AM CT
+  ↓
+GitHub Actions wakes up
+  ↓
+grade_props.py runs:
+  → Fetches finished game IDs from NBA Stats API
+  → Downloads box score for each game
+  → Grades every prop in data/picks.json
+  → Writes results to data/results.json
+  → Writes summary to data/performance.json
+  ↓
+Results committed back to your repo
+  ↓
+Replit app reads updated files on next page load
+```
+
+---
+
+## Adding picks for a new day
+
+Each morning, come back to Claude and say:
+> "Generate today's NBA prop picks"
+
+Claude will give you a new block of JSON to add to `data/picks.json`.
+Copy-paste it in via GitHub's web editor (click the file → pencil icon → edit → commit).
+
+Or paste them here and I'll add them automatically.
+
+---
+
+## Manually trigger a run
+
+You don't have to wait until 1 AM. To run grading immediately:
+
+1. Go to your repo → **Actions** tab
+2. Click **Nightly Prop Results** in the left sidebar
+3. Click **Run workflow** → **Run workflow**
+
+---
+
+## Files explained
+
+| File | What it does |
+|------|-------------|
+| `data/picks.json` | All prop picks — add new ones here daily |
+| `data/results.json` | Full graded results log — auto-updated nightly |
+| `data/performance.json` | Hit rate summary by player, user, and date |
+| `scripts/grade_props.py` | The grading engine |
+| `.github/workflows/nightly-results.yml` | The schedule that runs it |
+
+---
+
+## Responsible gambling
+
+This tool is for entertainment and tracking purposes only.
+Only Oaklawn Sports, BetSaracen, and Betly are licensed in Arkansas.
+If gambling is affecting your life: **1-800-522-4700**

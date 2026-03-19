@@ -1,0 +1,42 @@
+name: Nightly Prop Results
+
+on:
+  # Runs at 1:00 AM CT (6:00 AM UTC) every day — after west coast games finish
+  schedule:
+    - cron: '0 6 * * *'
+
+  # Also lets you trigger it manually from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  grade-props:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to commit results back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dateutil
+
+      - name: Run grader script
+        run: python scripts/grade_props.py
+        env:
+          NBA_API_DELAY: "1"   # seconds between API calls (be polite)
+
+      - name: Commit results
+        run: |
+          git config user.name  "Court Edge Bot"
+          git config user.email "bot@courtedge.local"
+          git add data/results.json data/performance.json
+          # Only commit if something changed
+          git diff --staged --quiet || git commit -m "Auto-grade: $(date +'%Y-%m-%d')"
+          git push
