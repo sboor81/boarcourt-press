@@ -1,0 +1,38 @@
+name: Nightly Prop Results
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  grade-props:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dateutil
+
+      - name: Run grader
+        run: python scripts/grade_props.py
+        env:
+          API_DELAY: "1"
+
+      - name: Commit results
+        run: |
+          git config user.name  "Boar Court Press Bot"
+          git config user.email "bot@boarcourtpress.local"
+          git add data/results.json data/performance.json
+          git diff --staged --quiet || git commit -m "Auto-grade: $(date +'%Y-%m-%d')"
+          git push
